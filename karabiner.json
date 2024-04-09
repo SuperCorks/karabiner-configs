@@ -257,9 +257,6 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
-                                        ],
-                                        "optional": [
-                                            "any"
                                         ]
                                     }
                                 },
@@ -303,7 +300,7 @@
                         ]
                     },
                     {
-                        "description": "Remap Control + C to Command + C for Copy functionality",
+                        "description": "Remap Control + C to Command + C for Copy",
                         "manipulators": [
                             {
                                 "from": {
@@ -311,9 +308,6 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
-                                        ],
-                                        "optional": [
-                                            "any"
                                         ]
                                     }
                                 },

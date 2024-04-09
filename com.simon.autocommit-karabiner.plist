@@ -2,10 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <!-- Save this file as com.user.autocommit-karabiner.plist and move it to ~/Library/LaunchAgents/ -->
+    <!-- Save this file as com.simon.autocommit-karabiner.plist and move it to ~/Library/LaunchAgents/ -->
     <!-- Install with the following commands
-        launchctl load ~/Library/LaunchAgents/com.user.autocommit.plist
-        launchctl start com.user.autocommit
+        launchctl load ~/Library/LaunchAgents/com.simon.autocommit-karabiner.plist
+        launchctl start com.simon.autocommit-karabiner
     -->
 
     <!-- Label for the service, must be unique -->
@@ -15,11 +15,18 @@
     <!-- Command to execute, adjust path as needed -->
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/simon/.config/karabiner/autocommit.sh</string>
+        <string>/Users/simon/.config/karabiner/autocommit-karabiner.sh</string>
     </array>
 
     <key>RunAtLoad</key>
     <true/>
+
+    <!-- Output your PATH -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/simon/google-cloud-sdk/bin:/Users/simon/.pyenv/shims:/Users/simon/Library/Developer/Xamarin/android-sdk-macosx/platform-tools:/Users/simon/.nvm/versions/node/v18.18.2/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/quarto/bin:/Users/simon/Library/Application Support/JetBrains/Toolbox/scripts</string>
+    </dict>
 
     <key>WorkingDirectory</key>
     <string>/Users/simon/.config/karabiner</string>
