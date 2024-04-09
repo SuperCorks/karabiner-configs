@@ -14,6 +14,7 @@ commit_changes() {
 }
 
 # Monitoring file changes with fswatch
-fswatch -o $WATCHED_DIR | while read num; do
+fswatch $WATCHED_DIR | while read file_path; do
+    echo "Changed: $file_path"
     commit_changes
 done
