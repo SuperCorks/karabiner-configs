@@ -141,7 +141,7 @@
                         ]
                     },
                     {
-                        "description": "Remap Control + z to Command + z for undo",
+                        "description": "Remap Control + z to Command + z for Undo",
                         "manipulators": [
                             {
                                 "from": {
