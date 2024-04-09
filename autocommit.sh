@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to the directory you want to watch
-WATCHED_DIR="/Users/simon/.config/karabiner"
+WATCHED_DIR="/Users/simon/.config/karabiner/"
 
 # Ensure the directory exists and change to it
 if cd "$WATCHED_DIR"; then
@@ -30,9 +30,8 @@ commit_changes() {
 }
 
 # Monitoring file changes with fswatch
-fswatch "$WATCHED_DIR" | while read file_path; do
-    echo "Detected: $file_path"
-done | stdbuf -oL grep -vE "(\.git|automatic_backups|assets|\.DS_Store)" | while read filtered_path; do
-    echo "Changed (Filtered): $filtered_path"
+fswatch -e "(\.git|automatic_backups|assets|\.DS_Store)" "$WATCHED_DIR" | while read file_path; do
+    echo "Changed: $file_path"
     commit_changes
 done
+
