@@ -13,6 +13,26 @@ fi
 
 # Function to handle changes
 commit_changes() {
+
+    # Get the git diff for the specified file
+    diff_output=$(git diff -- karabiner.json)
+
+    # Remove lines that match '+    "selected"' or '-    "selected"'
+    # using egrep with the --invert-match option to exclude these lines
+    filtered_diff=$(echo "$diff_output" | egrep --invert-match '^\+(    )*\"selected\"|^\-(    )*\"selected\"')
+
+    # Count the remaining + and - lines to determine if there are any significant changes
+    plus_lines=$(echo "$filtered_diff" | grep -c '^\+')
+    minus_lines=$(echo "$filtered_diff" | grep -c '^\-')
+
+    # Only commit if there are more remaining + or - lines
+    if [[ $plus_lines -eq 0 ]] && [[ $minus_lines -eq 0 ]]; then
+        echo "No significant changes to commit."
+        return 0
+    fi
+
+    echo "Committing Changes: $1"
+    
     if ! git add . ; then
         echo "Failed to add changes."
         return 1
@@ -34,4 +54,3 @@ fswatch --event=414 -E --exclude "(.git|automatic_backups|assets|.DS_Store)" "$W
     echo "Changed: $file_path"
     commit_changes
 done
-
