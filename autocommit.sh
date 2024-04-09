@@ -34,4 +34,3 @@ fswatch -e "*(\.git|automatic_backups|assets|\.DS_Store)*" "$WATCHED_DIR" | whil
     echo "Changed: $file_path"
     commit_changes
 done
-
