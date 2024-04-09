@@ -1,4 +1,3 @@
-*
-!.gitignore
-!README.md
-!karabiner.json
+assets/
+automatic_backups/
+.DS_Store

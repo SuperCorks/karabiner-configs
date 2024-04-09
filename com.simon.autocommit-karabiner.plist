@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Save this file as com.user.autocommit-karabiner.plist and move it to ~/Library/LaunchAgents/ -->
+    <!-- Install with the following commands
+        launchctl load ~/Library/LaunchAgents/com.user.autocommit.plist
+        launchctl start com.user.autocommit
+    -->
+
+    <!-- Label for the service, must be unique -->
+    <key>Label</key>
+    <string>com.simon.autocommit-karabiner</string>
+
+    <!-- Command to execute, adjust path as needed -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/simon/.config/karabiner/autocommit.sh</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/simon/.config/karabiner</string>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/autocommit.karabiner.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/autocommit.karabiner.err</string>
+</dict>
+</plist>
