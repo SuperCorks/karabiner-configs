@@ -138,7 +138,7 @@
                         ]
                     },
                     {
-                        "description": "Remap Control + z to Command + z for Undo",
+                        "description": "Remap Control (+ Shift) + z to Command (+ Shift) + z for Undo/Redo",
                         "manipulators": [
                             {
                                 "from": {
@@ -146,6 +146,9 @@
                                     "modifiers": {
                                         "mandatory": [
                                             "control"
+                                        ],
+                                        "optional": [
+                                            "shift"
                                         ]
                                     }
                                 },
