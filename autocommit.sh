@@ -30,7 +30,7 @@ commit_changes() {
 }
 
 # Monitoring file changes with fswatch
-fswatch -e "*(\.git|automatic_backups|assets|\.DS_Store)*" "$WATCHED_DIR" | while read file_path; do
+fswatch -e "*(.git|automatic_backups|assets|.DS_Store)*" "$WATCHED_DIR" | while read file_path; do
     echo "Changed: $file_path"
     commit_changes
 done
