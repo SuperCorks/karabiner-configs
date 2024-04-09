@@ -38,7 +38,7 @@ commit_changes() {
 }
 
 # Monitoring file changes with fswatch
-fswatch --event=414 -E --exclude "(.git|automatic_backups|assets|.DS_Store)" "$WATCHED_DIR" | while read file_path; do
+fswatch --event=414 -E --exclude "(.git|automatic_backups|assets|.DS_Store|.tmp)" "$WATCHED_DIR" | while read file_path; do
     echo "Changed: $file_path"
     commit_changes
 done
