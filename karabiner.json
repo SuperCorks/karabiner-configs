@@ -18,6 +18,30 @@
                 },
                 "rules": [
                     {
+                        "description": "Remap Cmd + c to Control + c for Close Terminal",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "c",
+                                        "modifiers": [
+                                            "control"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Remap Control + s to Command + s for Save",
                         "manipulators": [
                             {
