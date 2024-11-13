@@ -17,6 +17,6 @@ chmod +x ./autocommit-karabiner.sh
 ```
 
 ```shell
-launchctl load /Users/simon/Library/LaunchAgents/com.simon.autocommit-karabiner.plist
+C
 launchctl start com.simon.autocommit-karabiner
 ```
