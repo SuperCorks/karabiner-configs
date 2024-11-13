@@ -14,10 +14,7 @@
                                     },
                                     "pointing_button": "button1"
                                 },
-                                "to": [
-                                    { "pointing_button": "button1" },
-                                    { "key_code": "left_control" }
-                                ],
+                                "to": [{ "pointing_button": "button1" }],
                                 "type": "basic"
                             }
                         ]
