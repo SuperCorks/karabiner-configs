@@ -4,22 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Ctrl + Left Click to Left Click",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "mandatory": ["left_control"],
-                                        "optional": ["caps_lock"]
-                                    },
-                                    "pointing_button": "button1"
-                                },
-                                "to": [{ "pointing_button": "button1" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Remap Cmd + c to Control + c for Close Terminal",
                         "manipulators": [
                             {
