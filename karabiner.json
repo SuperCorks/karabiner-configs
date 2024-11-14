@@ -4,17 +4,9 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Ignore double Control in any JetBrains IDE",
+                        "description": "Ignore double Control globally",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "^com\\.jetbrains\\."
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "left_control",
                                     "modifiers": { "optional": ["any"] }
