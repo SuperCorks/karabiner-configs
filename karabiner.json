@@ -4,6 +4,28 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Ignore double Control in any JetBrains IDE",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com\\.jetbrains\\."
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to_if_alone": [{ "key_code": "left_control" }],
+                                "to_if_held_down": [{ "key_code": "left_control" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl + Left Click to Left Click",
                         "manipulators": [
                             {
@@ -260,6 +282,7 @@
                 }
             ],
             "name": "Ctl Profile - External keyboard",
+            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
@@ -267,7 +290,6 @@
         },
         {
             "name": "Mac Defaults",
-            "selected": true,
             "virtual_hid_keyboard": { "country_code": 0 }
         }
     ]
