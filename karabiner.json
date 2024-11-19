@@ -245,6 +245,7 @@
                         "product_id": 1969,
                         "vendor_id": 1118
                     },
+                    "ignore": true,
                     "manipulate_caps_lock_led": false
                 }
             ],
