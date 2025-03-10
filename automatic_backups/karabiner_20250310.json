@@ -250,6 +250,7 @@
                 }
             ],
             "name": "Ctl Profile - External keyboard",
+            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
@@ -257,7 +258,6 @@
         },
         {
             "name": "Mac Defaults",
-            "selected": true,
             "virtual_hid_keyboard": { "country_code": 0 }
         }
     ]
