@@ -230,6 +230,25 @@
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 1969,
+                        "vendor_id": 1118
+                    },
+                    "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 1969,
+                        "vendor_id": 1118
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false
+                }
+            ],
             "name": "Ctl Profile - External keyboard",
             "selected": true,
             "virtual_hid_keyboard": {
