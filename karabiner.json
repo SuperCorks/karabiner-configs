@@ -229,6 +229,27 @@
                         ]
                     },
                     {
+                        "description": "Remap Control (+ Shift) + f to Command (+ Shift) + f for Find",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": ["command"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Ctrl+Shift (tap) to switch input source",
                         "manipulators": [
                             {
@@ -331,6 +352,7 @@
                 }
             ],
             "name": "Ctl Profile - External keyboard",
+            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
@@ -338,7 +360,6 @@
         },
         {
             "name": "Mac Defaults",
-            "selected": true,
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "keyboard_type_v2": "ansi"
